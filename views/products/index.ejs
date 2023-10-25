@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Produts</title>
+</head>
+<body>
+    <h1><%= category %> Products</h1>
+    <ul>
+        <% for(let item of products) {%>
+        <li><a href="/products/<%= item._id %>"><%= item.name %></a></li>
+        <% } %>
+    </ul>
+    <a href="/products/new">New Item</a>
+    <% if(category !== 'All') { %>
+    <a href="/products">All Product</a>
+    <% } %>
+</body>
+</html>
