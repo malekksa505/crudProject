@@ -6,8 +6,12 @@
     <title>New product</title>
 </head>
 <body>
-    <h1>Add Product</h1>
-    <form action="/products" method="post">
+    <% if(farmName.name) {  %>
+    <h1>Add Product to <%= farmName.name %></h1>
+    <% } else { %>
+        <h1>Add Product</h1>
+        <% } %>
+    <form action="/farms/<%= farmName._id %>/products" method="post">
         <label for="name">
             Type name:
             <input type="text" name="name" id="name">

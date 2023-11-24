@@ -12,7 +12,11 @@
     <ul>
         <li>price: $<%= findProduct.price %></li>
         <li>category: <a href="/products?category=<%= findProduct.category %>"><%= findProduct.category %></a></li>
+
     </ul>
+    <h4>
+        <a href="/farms/<%= findProduct.farm._id %>"><%= findProduct.farm.name %></a>
+    </h4>
     <a href="/products">Get Back!</a>
     <a href="/products/<%= findProduct._id %>/edit">edit product</a>
     <form action="<%= findProduct._id %>?_method=DELETE" method="post">
